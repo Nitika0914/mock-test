@@ -1,4 +1,5 @@
 let feedbackStore = []
+
 function handler(req, res){
     if(req.method === "POST"){
         const {name, email, message} = req.body;
@@ -13,3 +14,5 @@ function handler(req, res){
         return res.status(405).json({message: `Unable to find ${req.method} request`});
     }
 }
+
+export default handler;
