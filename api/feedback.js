@@ -1,7 +1,7 @@
 function handler(req, res){
     const data = req.body;
     if(!data.name || !data.email || data.message){
-        res.status(405).json({message: "Data missing"});
+        res.status(400).json({message: "Data missing"});
     }
     if(req.method === "POST"){
         res.status(200).json({message: `"status": "success", "message": "Feedback received"`})
